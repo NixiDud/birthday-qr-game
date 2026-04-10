@@ -12,7 +12,6 @@ const defaultBadges: BadgeData[] = ALL_TASK_CODES.map((code) => ({
   status: 'pending',
 }));
 
-const TEST_CODES: TaskCode[] = ['QR1', 'QR2', 'QR3', 'QR4', 'QR5', 'QR6'];
 
 type PlayerSummary = {
   id: string;
@@ -94,17 +93,6 @@ export default function GamePage() {
           </Link>
           <div className="muted">Atver kameru un noskenē QR kodu</div>
 
-          <div className="card stack" style={{ width: '100%', marginTop: 12, textAlign: 'left' }}>
-            <div style={{ fontWeight: 700 }}>Ātrā testēšana datorā</div>
-            <div className="muted">Ja kamera nestrādā vai testē no datora, atver uzdevumus ar šīm pogām.</div>
-            <div className="row" style={{ flexWrap: 'wrap' }}>
-              {TEST_CODES.map((code) => (
-                <Link key={code} className="btn btn-secondary" href={`/game/task/${code}`}>
-                  {code}
-                </Link>
-              ))}
-            </div>
-          </div>
 
           {error ? <div className="notice">{error}</div> : null}
         </div>
