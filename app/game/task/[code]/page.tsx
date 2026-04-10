@@ -341,7 +341,7 @@ export default function TaskPage() {
                 <>
                   <div className="notice">Padzeries, tu izskaties izslāpis.</div>
                   <button className="btn" onClick={handleSubmit}>
-                    Spin the wheel
+                    Saņem bonusu!
                   </button>
                 </>
               ) : null}
